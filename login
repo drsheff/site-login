@@ -30,11 +30,11 @@ def login(user, passw):
         time.sleep(5)
 #        wait = WebDriverWait(driver, 10)
         try:
-            tit = WebDriverWait(driver, 5).until(EC.title_is("Interfax - News"))
+            tit = WebDriverWait(driver, 5).until(EC.title_is("string"))
             #print("page is ready!")
             sign = driver.find_element_by_xpath('//*[@id="ctl00_cplMenu_TopMenu1_userInfo_PersonalManagerPanelDiv"]/table/tbody/tr[2]/td')
 #            print(sign.text)
-            if sign.text == "Subscription expiration: 03/06/2023":
+            if sign.text == "string":
                 print("OK")
         except Exception:
             print("Error Login")
